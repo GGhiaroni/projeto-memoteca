@@ -2,11 +2,10 @@ const api = {
     async buscarDados() {
         try {
             const response = await fetch('http://localhost:3000/pensamentos');
-            const dados = await response.json();
-            return dados;
+            return await response.json();
         } catch (error) {
             alert('Erro ao buscar os dados!');
-            console.log(error);
+            throw error;
         }
     }
 };
