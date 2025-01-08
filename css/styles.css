@@ -146,6 +146,15 @@ h2, h3 {
   line-height: normal;
 }
 
+#mensagem-mural-vazio {
+  color: var(--Azul-Dark, #041832);
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 #pensamento-conteudo::placeholder,  #pensamento-autoria::placeholder{
   color: var(--Cinza-medio, #8F8F8F);
   font-family: "Poppins", sans-serif;
