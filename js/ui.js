@@ -36,14 +36,26 @@ const ui = {
             ui.preencherFormularioParaEdicao(dado.id);
         };
 
+        const botaoExcluir = document.createElement("button");
+        botaoExcluir.classList.add("botao-excluir");
+        botaoExcluir.onclick = () => {
+            api.excluirDado(dado.id);
+        };
+
         const iconeEditar = document.createElement("img");
         iconeEditar.src = "assets/imagens/icone-editar.png";
-        iconeEditar.alt = "ícone lápis para editar pensamento";
+        iconeEditar.alt = "ícone lápis para editar card";
         botaoEditar.appendChild(iconeEditar);
+
+        const iconeExcluir = document.createElement("img");
+        iconeExcluir.src = "assets/imagens/icone-excluir.png";
+        iconeExcluir.alt = "ícone lápis para excluir card";
+        botaoExcluir.appendChild(iconeExcluir);
 
         const icones = document.createElement("div");
         icones.classList.add("icones");
         icones.appendChild(botaoEditar);
+        icones.appendChild(botaoExcluir);
 
         li.appendChild(iconeAspas);
         li.appendChild(dadoConteudo);

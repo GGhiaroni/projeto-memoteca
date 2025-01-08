@@ -53,6 +53,18 @@ const api = {
             alert("Erro ao editar o dado!");
             throw error;
         }
+    },
+
+    async excluirDado(id)
+    {
+        try {
+            await fetch(`http://localhost:3000/pensamentos/${id}`, {
+                method: "DELETE"
+            });
+        } catch (error) {
+            alert("Erro ao excluir card!");
+            throw error;
+        }
     }
 }
 
