@@ -22,7 +22,12 @@ async function handleSubmitFormulario(e)
     const autoria = document.getElementById("pensamento-autoria").value;
 
     try {
-        await api.salvarDados({ conteudo, autoria });
+        if (id)
+        {
+            await api.editarDado({id, conteudo, autoria});
+        } else {
+            await api.salvarDados({ conteudo, autoria });
+        }
         ui.renderizarDados();
     } catch (error) {
         alert("Ocorreu um erro ao salvar!");
