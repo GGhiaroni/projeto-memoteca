@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const formulario = document.getElementById("pensamento-form");
 
     formulario.addEventListener('submit', handleSubmitFormulario);
+
+    const botaoCancelar = document.getElementById("botao-cancelar");
+    botaoCancelar.onclick = () => {
+        ui.limparFormulario();
+    };
 });
 
 async function handleSubmitFormulario(e)

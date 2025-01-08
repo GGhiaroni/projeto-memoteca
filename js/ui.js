@@ -1,18 +1,16 @@
 import api from "./api.js";
 
 const ui = {
-    async renderizarDados()
-    {
+    async renderizarDados() {
         try {
             const dados = await api.buscarDados();
-            dados.forEach(ui.adicionarDadosNaLista);            
+            dados.forEach(ui.adicionarDadosNaLista);
         } catch (error) {
             throw error;
         }
     },
 
-    adicionarDadosNaLista(dado)
-    {
+    adicionarDadosNaLista(dado) {
         const listaPensamentos = document.getElementById('lista-pensamentos');
 
         const li = document.createElement("li");
@@ -37,6 +35,11 @@ const ui = {
         li.appendChild(dadoAutoria);
 
         listaPensamentos.appendChild(li);
+    },
+
+    limparFormulario()
+    {
+        document.getElementById("pensamento-form").reset();
     }
 };
 
