@@ -1,8 +1,10 @@
+const URL_BASE = "http://localhost:3000";
+
 const api = {
     async buscarDados()
     {
         try {
-            const response = await fetch('http://localhost:3000/pensamentos');
+            const response = await fetch(`${URL_BASE}/pensamentos`);
             return await response.json();
         } catch (error) {
             alert('Erro ao buscar os dados!');
@@ -13,7 +15,7 @@ const api = {
     async salvarDados(dado)
     {
         try {
-            const response = await fetch('http://localhost:3000/pensamentos', {
+            const response = await fetch(`${URL_BASE}/pensamentos`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -30,7 +32,7 @@ const api = {
     async buscarDadoUnicoPorId(id)
     {
         try {
-            const response = await fetch(`http://localhost:3000/pensamentos/${id}`);
+            const response = await fetch(`${URL_BASE}/pensamentos/${id}`);
             return await response.json();
         } catch (error) {
             alert("Erro ao buscar dado!");
@@ -41,7 +43,7 @@ const api = {
     async editarDado(dado)
     {
         try {
-            const response = await fetch(`http://localhost:3000/pensamentos/${dado.id}`, {
+            const response = await fetch(`${URL_BASE}/pensamentos/${dado.id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -58,7 +60,7 @@ const api = {
     async excluirDado(id)
     {
         try {
-            await fetch(`http://localhost:3000/pensamentos/${id}`, {
+            await fetch(`${URL_BASE}/pensamentos/${id}`, {
                 method: "DELETE"
             });
         } catch (error) {
