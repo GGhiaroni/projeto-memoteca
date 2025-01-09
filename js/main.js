@@ -94,7 +94,6 @@ async function handleInputBusca()
     
     try {
         const cardsFiltrados = await api.buscarCard(termoBuscado);
-        console.log(cardsFiltrados);
         ui.renderizarDados(cardsFiltrados);
     } catch (error) {
         alert("Erro ao realizar busca!");

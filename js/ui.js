@@ -1,10 +1,19 @@
 import api from "./api.js";
 
 const ui = {
-    async renderizarDados() {
+    async renderizarDados(cardsFiltrados = null) {
         try {
-            const dados = await api.buscarDados();
-            dados.forEach(ui.adicionarDadosNaLista);
+            const listaPensamentos = document.getElementById("lista-pensamentos");
+            listaPensamentos.innerHTML = '';
+            
+            let cardsARenderizar;
+
+            if (cardsFiltrados) {
+                cardsARenderizar = cardsFiltrados;
+            } else {
+                cardsARenderizar = await api.buscarDados();
+            }
+            cardsARenderizar.forEach(ui.adicionarDadosNaLista);
         } catch (error) {
             throw error;
         }
