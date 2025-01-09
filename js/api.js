@@ -76,6 +76,25 @@ const api = {
             alert("Erro ao excluir card!");
             throw error;
         }
+    },
+
+    async buscarCard(termo)
+    {
+        try {
+           const cards = await this.buscarDados();
+            const termoBuscadoEmMinusculas = termo.toLowerCase();
+
+            const cardsFiltrados = cards.filter(card => {
+                return (card.conteudo.toLowerCase().includes(termoBuscadoEmMinusculas) ||
+                    card.autoria.toLowerCase().includes(termoBuscadoEmMinusculas));
+            });
+
+            return cardsFiltrados; 
+            
+        } catch (error) {
+            alert("Erro ao realizar busca!");
+            throw error;
+        }
     }
 }
 

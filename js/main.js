@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     botaoCancelar.onclick = () => {
         ui.limparFormulario();
     };
+
+    const inputBusca = document.getElementById("campo-busca");
+
+    inputBusca.addEventListener("input", handleInputBusca);
+
 });
 
 async function handleSubmitFormulario(e)
@@ -81,4 +86,18 @@ async function verificarMuralVazio()
 
         main.appendChild(imagemMuralVazio);
     }       
+}
+
+async function handleInputBusca()
+{
+    const termoBuscado = document.getElementById("campo-busca").value;
+    
+    try {
+        const cardsFiltrados = await api.buscarCard(termoBuscado);
+        console.log(cardsFiltrados);
+        ui.renderizarDados(cardsFiltrados);
+    } catch (error) {
+        alert("Erro ao realizar busca!");
+        throw error;
+    }
 }
