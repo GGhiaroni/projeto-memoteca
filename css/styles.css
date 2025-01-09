@@ -271,9 +271,10 @@ h2, h3 {
   position: absolute;
   bottom: 16px;
   right: 16px;
+  display: flex;
 }
 
-.botao-editar, .botao-excluir {
+.botao-editar, .botao-excluir, .botao-favorito {
   background: none;
   border: none;
   cursor: pointer;

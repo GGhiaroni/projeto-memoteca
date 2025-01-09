@@ -5,7 +5,7 @@ const ui = {
         try {
             const listaPensamentos = document.getElementById("lista-pensamentos");
             listaPensamentos.innerHTML = '';
-            
+
             let cardsARenderizar;
 
             if (cardsFiltrados) {
@@ -51,6 +51,9 @@ const ui = {
             api.excluirDado(dado.id);
         };
 
+        const botaoFavorito = document.createElement("button");
+        botaoFavorito.classList.add("botao-favorito");
+
         const iconeEditar = document.createElement("img");
         iconeEditar.src = "assets/imagens/icone-editar.png";
         iconeEditar.alt = "ícone lápis para editar card";
@@ -61,8 +64,14 @@ const ui = {
         iconeExcluir.alt = "ícone lápis para excluir card";
         botaoExcluir.appendChild(iconeExcluir);
 
+        const iconeFavorito = document.createElement("img");
+        iconeFavorito.src = "assets/imagens/icone-favorito_outline.png";
+        iconeFavorito.alt = "ícone favorito";
+        botaoFavorito.appendChild(iconeFavorito);
+
         const icones = document.createElement("div");
         icones.classList.add("icones");
+        icones.appendChild(botaoFavorito);
         icones.appendChild(botaoEditar);
         icones.appendChild(botaoExcluir);
 
