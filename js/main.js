@@ -26,11 +26,18 @@ async function handleSubmitFormulario(e)
     const id = document.getElementById("pensamento-id").value;
     const conteudo = document.getElementById("pensamento-conteudo").value;
     const autoria = document.getElementById("pensamento-autoria").value;
+    const data = document.getElementById("pensamento-data").value;
+
+    if (!validarData(data)) {
+        alert("Não é possível selecionar uma data futura. Selecione outra data.");
+        ui.limparFormulario();
+        return;
+    };        
 
     try {
         if (id)
         {
-            await api.editarDado({id, conteudo, autoria});
+            await api.editarDado({id, conteudo, autoria, data});
         } else {
             await api.salvarDados({ conteudo, autoria });
         }
@@ -99,4 +106,10 @@ async function handleInputBusca()
         alert("Erro ao realizar busca!");
         throw error;
     }
+}
+
+function validarData(data) {
+    const dataAtual = new Date();
+    const dataInseridaNoInput = new Date(data);
+    return dataInseridaNoInput <= dataAtual;
 }
