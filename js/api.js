@@ -2,7 +2,7 @@ const URL_BASE = "http://localhost:3000";
 
 const converterStringParaData = (dataString) => {
     const [ano, mes, dia] = dataString.split("-");
-    return new Date(Date.UTC(ano, mes, dia));
+    return new Date(Date.UTC(ano, mes - 1, dia));
 };
 
 const api = {
