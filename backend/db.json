@@ -4,43 +4,57 @@
       "id": "c9b6",
       "favorito": true,
       "conteudo": "Querido, tudo é muita coisa!",
-      "autoria": "Djalma, meu psicólogo"
+      "autoria": "Djalma, meu psicólogo",
+      "data": "2024-12-15T14:30:00.123Z"
     },
     {
       "id": "c670",
       "favorito": true,
       "conteudo": "Teste",
-      "autoria": "teste"
+      "autoria": "teste",
+      "data": "2024-11-28T10:45:00.456Z"
     },
     {
       "id": "f808",
       "favorito": true,
       "conteudo": "Alta do dólar",
-      "autoria": "Globo.com"
+      "autoria": "Globo.com",
+      "data": "2024-12-05T09:00:00.789Z"
     },
     {
       "id": "9dbd",
       "favorito": false,
       "conteudo": "Como ser programador",
-      "autoria": "Alura"
+      "autoria": "Alura",
+      "data": "2024-10-19T17:15:00.321Z"
     },
     {
       "id": "6a0c",
       "favorito": true,
       "conteudo": "Nova promoção do Outback",
-      "autoria": "Outback"
+      "autoria": "Outback",
+      "data": "2024-12-22T20:10:00.654Z"
     },
     {
       "id": "eaa2",
       "favorito": false,
       "conteudo": "O melhor clube do mundo vai jogar",
-      "autoria": "Fluminense"
+      "autoria": "Fluminense",
+      "data": "2024-11-02T13:20:00.987Z"
     },
     {
       "id": "5621",
       "favorito": true,
       "conteudo": "Ou tu estuda, ou trabalha igual um corno! Muitas vezes, ambos. Independente.",
-      "autoria": "Gabriel Ghiaroni"
+      "autoria": "Gabriel Ghiaroni",
+      "data": "2024-12-30T22:00:00.111Z"
+    },
+    {
+      "id": "da30",
+      "conteudo": "Muitos querem a glória, poucos estão dispostos a se sacrificar por ela.          ",
+      "autoria": "Bruce Lee",
+      "data": "2025-01-10",
+      "favorito": true
     }
   ]
 }

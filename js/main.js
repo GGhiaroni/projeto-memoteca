@@ -39,7 +39,7 @@ async function handleSubmitFormulario(e)
         {
             await api.editarDado({id, conteudo, autoria, data});
         } else {
-            await api.salvarDados({ conteudo, autoria });
+            await api.salvarDados({ conteudo, autoria, data });
         }
         ui.renderizarDados();
     } catch (error) {
