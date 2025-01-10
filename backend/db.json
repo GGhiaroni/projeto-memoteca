@@ -1,44 +1,44 @@
 {
   "pensamentos": [
     {
-    "id": "c9b6",
-      "favorito": false,
+      "id": "c9b6",
+      "favorito": true,
       "conteudo": "Querido, tudo é muita coisa!",
       "autoria": "Djalma, meu psicólogo"
     },
     {
-    "id": "c670",
-      "favorito": false,
+      "id": "c670",
+      "favorito": true,
       "conteudo": "Teste",
       "autoria": "teste"
     },
     {
-    "id": "f808",
-      "favorito": false,
+      "id": "f808",
+      "favorito": true,
       "conteudo": "Alta do dólar",
       "autoria": "Globo.com"
     },
     {
-    "id": "9dbd",
+      "id": "9dbd",
       "favorito": false,
       "conteudo": "Como ser programador",
       "autoria": "Alura"
     },
     {
-    "id": "6a0c",
-      "favorito": false,
+      "id": "6a0c",
+      "favorito": true,
       "conteudo": "Nova promoção do Outback",
       "autoria": "Outback"
     },
     {
-    "id": "eaa2",
+      "id": "eaa2",
       "favorito": false,
       "conteudo": "O melhor clube do mundo vai jogar",
       "autoria": "Fluminense"
     },
     {
-    "id": "5621",
-      "favorito": false,
+      "id": "5621",
+      "favorito": true,
       "conteudo": "Ou tu estuda, ou trabalha igual um corno! Muitas vezes, ambos. Independente.",
       "autoria": "Gabriel Ghiaroni"
     }

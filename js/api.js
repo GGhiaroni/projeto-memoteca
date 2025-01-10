@@ -95,6 +95,16 @@ const api = {
             alert("Erro ao realizar busca!");
             throw error;
         }
+    },
+
+    async atualizarFavorito(id, favorito)
+    {
+        try {
+            const response = await axios.patch(`${URL_BASE}/pensamentos/${id}`, { favorito });
+        } catch (error) {
+            alert("Erro ao favoritar card!");
+            throw error;
+        }
     }
 }
 

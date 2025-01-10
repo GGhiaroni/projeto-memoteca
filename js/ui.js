@@ -53,6 +53,14 @@ const ui = {
 
         const botaoFavorito = document.createElement("button");
         botaoFavorito.classList.add("botao-favorito");
+        botaoFavorito.onclick = async () => {
+            try {
+                await api.atualizarFavorito(dado.id, !dado.favorito);
+                ui.renderizarDados();
+            } catch (error) {
+                throw error;
+            }
+        };
 
         const iconeEditar = document.createElement("img");
         iconeEditar.src = "assets/imagens/icone-editar.png";
@@ -65,7 +73,8 @@ const ui = {
         botaoExcluir.appendChild(iconeExcluir);
 
         const iconeFavorito = document.createElement("img");
-        iconeFavorito.src = "assets/imagens/icone-favorito_outline.png";
+        iconeFavorito.src = dado.favorito ? "assets/imagens/icone-favorito.png"
+            : "assets/imagens/icone-favorito_outline.png";
         iconeFavorito.alt = "ícone favorito";
         botaoFavorito.appendChild(iconeFavorito);
 
