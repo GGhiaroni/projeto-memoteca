@@ -1,5 +1,10 @@
 const URL_BASE = "http://localhost:3000";
 
+const converterStringParaData = (dataString) => {
+    const [ano, mes, dia] = dataString.split("-");
+    return new Date(Date.UTC(ano, mes, dia));
+};
+
 const api = {
     async buscarDados()
     {
@@ -25,7 +30,11 @@ const api = {
             //     body: JSON.stringify(dado)
             // });
             // return await response.json();
-            const response = await axios.post(`${URL_BASE}/pensamentos`, dado);
+            const dataConvertida = converterStringParaData(dado.data);
+            const response = await axios.post(`${URL_BASE}/pensamentos`, {
+                ...dado,
+                data: dataConvertida
+            });
             return await response.data;
         } catch (error) {
             alert('Erro ao salvar dados!');
