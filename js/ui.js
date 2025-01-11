@@ -119,6 +119,7 @@ const ui = {
         document.getElementById("pensamento-conteudo").value = dado.conteudo;
         document.getElementById("pensamento-autoria").value = dado.autoria;
         document.getElementById("pensamento-data").value = dado.data;
+        document.getElementById("form-container").scrollIntoView();
     }
 };
 
