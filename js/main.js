@@ -13,9 +13,25 @@ function validarAutoriaRegex(autoria) {
     return regexAutoria.test(autoria);
 };
 
+const cardsSet = new Set();
+
+async function adicionarChaveAosCards() {
+    try {
+        const cards = await api.buscarDados();
+        cards.forEach(card => {
+            const chaveNovoCard = `${card.conteudo.toLowerCase()}-${card.autoria.toLowerCase()}`;
+            cardsSet.add(chaveNovoCard);
+        });
+    } catch (error) {
+        alert("Erro ao adicionar chave ao card!");
+        throw error;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     ui.renderizarDados();
     verificarMuralVazio();
+    adicionarChaveAosCards();
 
     const formulario = document.getElementById("pensamento-form");
 
@@ -35,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 async function handleSubmitFormulario(e)
 {
     e.preventDefault();
+
     const id = document.getElementById("pensamento-id").value;
     const conteudo = document.getElementById("pensamento-conteudo").value.trim();
     const autoria = document.getElementById("pensamento-autoria").value.trim();
@@ -54,7 +71,14 @@ async function handleSubmitFormulario(e)
         alert("Não é possível selecionar uma data futura. Selecione outra data.");
         ui.limparFormulario();
         return;
-    };        
+    };
+    
+    const chaveNovoCard = `${conteudo.toLowerCase()}-${autoria.toLowerCase()}`;
+
+    if (cardsSet.has(chaveNovoCard)) {
+        alert("O conteúdo deste card já existe.");
+        return;
+    }
 
     try {
         if (id)
