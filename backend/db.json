@@ -78,6 +78,12 @@
       "conteudo": "          Esse é um novo pensamento!",
       "autoria": "Lolita",
       "data": "2025-01-03T00:00:00.000Z"
+    },
+    {
+      "id": "8b69",
+      "conteudo": "Novo teste de pensamento!",
+      "autoria": "Monge Tibetano",
+      "data": "2025-01-03T00:00:00.000Z"
     }
   ]
 }

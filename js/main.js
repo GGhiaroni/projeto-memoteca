@@ -7,6 +7,12 @@ function validarConteudoRegex(conteudo) {
     return regexConteudo.test(conteudo);
 };
 
+const regexAutoria = /^[a-zA-z]{3,15}$/;
+
+function validarAutoriaRegex(autoria) {
+    return regexAutoria.test(autoria);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     ui.renderizarDados();
     verificarMuralVazio();
@@ -34,11 +40,15 @@ async function handleSubmitFormulario(e)
     const autoria = document.getElementById("pensamento-autoria").value.trim();
     const data = document.getElementById("pensamento-data").value;
 
-    const conteudoTrimmed = conteudo.trim();
-    if (!validarConteudoRegex(conteudoTrimmed)) {
+    if (!validarConteudoRegex(conteudo)) {
         alert("É permitida a inclusão apenas de letras e comentários com, no mínimo, 10 caracteres.");
         return;
     };
+
+    if (!validarAutoriaRegex(autoria)) {
+        alert("Para cadastrar um autor, é permitida a inclusão apenas de letras, com 3 caracteres no mínimo e, no máximo, 10.");
+        return;
+    }
 
     if (!validarData(data)) {
         alert("Não é possível selecionar uma data futura. Selecione outra data.");
