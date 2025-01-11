@@ -1,65 +1,83 @@
 {
   "pensamentos": [
     {
-    "id": "c9b6",
+      "id": "c9b6",
       "favorito": true,
       "conteudo": "Querido, tudo é muita coisa!",
       "autoria": "Djalma, meu psicólogo",
       "data": "2024-12-15T14:30:00.123Z"
     },
     {
-    "id": "c670",
+      "id": "c670",
       "favorito": true,
       "conteudo": "Teste",
       "autoria": "teste",
       "data": "2024-11-28T10:45:00.456Z"
     },
     {
-    "id": "f808",
+      "id": "f808",
       "favorito": true,
       "conteudo": "Alta do dólar",
       "autoria": "Globo.com",
       "data": "2024-12-05T09:00:00.789Z"
     },
     {
-    "id": "9dbd",
+      "id": "9dbd",
       "favorito": false,
       "conteudo": "Como ser programador",
       "autoria": "Alura",
       "data": "2024-10-19T17:15:00.321Z"
     },
     {
-    "id": "6a0c",
+      "id": "6a0c",
       "favorito": true,
       "conteudo": "Nova promoção do Outback",
       "autoria": "Outback",
       "data": "2024-12-22T20:10:00.654Z"
     },
     {
-    "id": "eaa2",
+      "id": "eaa2",
       "favorito": false,
       "conteudo": "O melhor clube do mundo vai jogar",
       "autoria": "Fluminense",
       "data": "2024-11-02T13:20:00.987Z"
     },
     {
-    "id": "5621",
+      "id": "5621",
       "favorito": true,
       "conteudo": "Ou tu estuda, ou trabalha igual um corno! Muitas vezes, ambos. Independente.",
       "autoria": "Gabriel Ghiaroni",
       "data": "2024-12-30T22:00:00.111Z"
     },
     {
-    "id": "cd43",
+      "id": "cd43",
       "conteudo": "Dessa água não beberei!",
       "autoria": "Qualquer cidadão brasileiro",
       "data": "2025-02-09T00:00:00.000Z"
     },
     {
-    "id": "f8f4",
+      "id": "f8f4",
       "conteudo": "Be like water making its way through cracks. Do not be assertive, but adjust to the object, and you shall find a way around or through it. If nothing within you stays rigid, outward things will disclose themselves. Empty your mind, be formless. Shapeless, like water. If you put water into a cup, it becomes the cup. You put water into a bottle and it becomes the bottle. You put it in a teapot, it becomes the teapot. Now, water can flow or it can crash. Be water, my friend.",
       "autoria": "Bruce Lee",
       "data": "1953-10-30T00:00:00.000Z"
+    },
+    {
+      "id": "9520",
+      "conteudo": "          dasdasd",
+      "autoria": "afadf",
+      "data": "2025-01-03T00:00:00.000Z"
+    },
+    {
+      "id": "9103",
+      "conteudo": "          fafadsfdasfdasf",
+      "autoria": "fadfadfa",
+      "data": "2025-01-02T00:00:00.000Z"
+    },
+    {
+      "id": "fb16",
+      "conteudo": "          Esse é um novo pensamento!",
+      "autoria": "Lolita",
+      "data": "2025-01-03T00:00:00.000Z"
     }
   ]
 }

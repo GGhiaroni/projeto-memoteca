@@ -1,6 +1,12 @@
 import api from "./api.js";
 import ui from "./ui.js";
 
+const regexConteudo = /^[A-Za-zÀ-ÿ\s.,!?]{10,}$/;
+
+function validarConteudoRegex(conteudo) {
+    return regexConteudo.test(conteudo);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     ui.renderizarDados();
     verificarMuralVazio();
@@ -24,9 +30,15 @@ async function handleSubmitFormulario(e)
 {
     e.preventDefault();
     const id = document.getElementById("pensamento-id").value;
-    const conteudo = document.getElementById("pensamento-conteudo").value;
-    const autoria = document.getElementById("pensamento-autoria").value;
+    const conteudo = document.getElementById("pensamento-conteudo").value.trim();
+    const autoria = document.getElementById("pensamento-autoria").value.trim();
     const data = document.getElementById("pensamento-data").value;
+
+    const conteudoTrimmed = conteudo.trim();
+    if (!validarConteudoRegex(conteudoTrimmed)) {
+        alert("É permitida a inclusão apenas de letras e comentários com, no mínimo, 10 caracteres.");
+        return;
+    };
 
     if (!validarData(data)) {
         alert("Não é possível selecionar uma data futura. Selecione outra data.");
