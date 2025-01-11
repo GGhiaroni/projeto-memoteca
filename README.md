@@ -1,58 +1,62 @@
-# Memoteca
+# Mural de Pensamentos 🧠✨
 
-Memoteca é um aplicativo organizador de pensamentos e frases que permite cadastrar, listar, editar e deletar pensamentos, incluindo informações como conteúdo e autoria.
+## 📖 Descrição do Projeto
+Bem-vindo ao **Mural de Pensamentos!** 🎨✨  
+Este projeto foi desenvolvido para armazenar, gerenciar e explorar ideias, pensamentos e reflexões de forma interativa. Com funcionalidades completas de CRUD (Criar, Ler, Atualizar e Deletar), o sistema também possui mecanismos avançados como busca por filtros, validação de conteúdo, e até marcação de favoritos ⭐.
 
-## 🔨 Funcionalidades do projeto
+Utilizei tecnologias modernas como JavaScript ES6, manipulação de DOM, funções assíncronas com async/await, regex para validação de dados e a API do Live Server para simular um banco de dados.
 
-`Cadastro de pensamentos`: Permite adicionar novos pensamentos à lista, inserindo informações como conteúdo e autoria.
+## 🎯 Funcionalidades
 
-`Listagem de pensamentos`: Exibe os pensamentos cadastrados, permitindo visualizar o texto e a autoria.
+### 🔧 CRUD
+- **Criar**: Adicione um novo pensamento ao mural com título, autoria e data.
+- **Atualizar**: Edite os pensamentos existentes com facilidade.
+- **Deletar**: Remova pensamentos indesejados.
+- **Evitar duplicações**: Garantia de que não há pensamentos duplicados usando a estrutura Set.
 
-`Edição de pensamentos`: Permite editar pensamentos existentes, atualizando as informações conforme necessário.
+### 🔍 Busca e Filtros
+- **Busca em tempo real**: Localize pensamentos por conteúdo ou autoria com um filtro dinâmico.
 
-`Exclusão de pensamentos`: Permite remover pensamentos da lista.
+### ⭐ Favoritar
+- **Destaque os pensamentos** que você mais gosta marcando-os como favoritos.
 
-## ✔️ Técnicas e tecnologias utilizadas
+### 🛡️ Validações
+- **Conteúdo**: Aceita apenas textos com pelo menos 10 caracteres (letras e pontuações permitidas).
+- **Autoria**: Aceita apenas nomes com 3 a 15 caracteres (somente letras).
+- **Data**: Apenas datas válidas e não futuras.
 
-`JavaScript`: Linguagem de programação utilizada para desenvolver a lógica do aplicativo.
+## 🛠️ Tecnologias e Ferramentas
+- **JavaScript ES6** (com foco em async/await, regex e manipulação de DOM).
+- **Live Server** para simular um backend.
+- **Set** para evitar duplicações de pensamentos.
 
-`Fetch API`: Utilizada para realizar requisições HTTP para comunicação com o servidor.
+## 📜 Como Funciona o Código
 
-`Axios`: Biblioteca usada para facilitar e simplificar as requisições HTTP.
+### 📂 Arquitetura
+- **index.html**: Estrutura principal da aplicação.
+- **style.css**: Estilos do mural.
+- **script.js**: Gerenciamento das interações e lógica principal.
+- **api.js**: Comunicação com o backend simulado no Live Server.
+- **ui.js**: Responsável por renderizar e atualizar a interface do usuário.
 
-`Node.js`: Plataforma utilizada para executar o ambiente de desenvolvimento.
+### 🔗 Principais Funções
+- **Validação com Regex**: Valida o conteúdo e autoria com expressões regulares (`regexConteudo` e `regexAutoria`).
+- **Gerenciamento de Cards com Set**: Utiliza a estrutura **Set** para criar uma chave única baseada em conteúdo e autoria, evitando duplicações.
+- **Manipulação de DOM**: Renderização de pensamentos e suas interações (editar, deletar, favoritar).
+- **Funções Assíncronas**: Comunicação com a API do Live Server para busca, adição e atualização de dados.
 
-`JSON Server`: Utilizado para simular um backend e facilitar o desenvolvimento e teste das operações CRUD.
+## 📸 Interface do Usuário
 
-`CSS`: Utilizado para estilização da interface do aplicativo.
+### Mural Inicial Vazio:
+- **Mensagem motivacional** para incentivar o usuário a começar.
+- **Botão** para adicionar o primeiro pensamento.
 
+### Cards de Pensamentos:
+Cada pensamento exibe:
+- Conteúdo, autoria, data e ícones para ações:
+  - 🖋️ **Editar**.
+  - ❌ **Deletar**.
+  - ⭐ **Favoritar** (ou remover dos favoritos).
 
-## 📁 Link do Figma
-
-Você pode [acessar o figma do projeto aqui](https://www.figma.com/design/Sz1gmmemxqcB3amInL4Ndp/Rebrand-Memoteca-%7C-Curso-CRUD?node-id=148-26&t=FpdmfbiM1i1s6REQ-0).
-
-## 🛠️ Abrir e rodar o projeto
-
-Para executar a API fake, você vai precisar do NodeJS; a versão utilizada foi a 20.12.2.
-
-Instale o JSON Server globalmente (se ainda não estiver instalado):
-
-```bash
-npm install -g json-server
-```
-
-Para executar, abra um novo terminal e, dentro da pasta backend, execute:
-
-```bash
-npm start
-```
-
-Acesse o backend localmente em seu navegador:
-
-http://localhost:3000
-
-Para executar o frontend, abra o projeto no Visual Studio Code. Com a extensão Live Server instalada, clique com o botão direito no arquivo index.html e selecione "Open with Live Server" no menu de contexto.
-
-Acesse o frontend localmente em seu navegador:
-
-http://localhost:5500
+### Barra de Busca:
+- **Busca em tempo real** que filtra os pensamentos pelo termo inserido.
