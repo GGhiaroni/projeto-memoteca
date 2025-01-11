@@ -35,6 +35,19 @@ const ui = {
         dadoConteudo.textContent = dado.conteudo;
         dadoConteudo.classList.add("pensamento-conteudo");
 
+        const cardData = document.createElement("div");
+        var options = {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            timeZone: "UTC"
+        };
+        const dataFormatada = dado.data.toLocaleDateString('pt-BR', options)
+
+        cardData.textContent = dataFormatada;
+        cardData.classList.add("pensamento-data");
+
         const dadoAutoria = document.createElement("div");
         dadoAutoria.textContent = dado.autoria;
         dadoAutoria.classList.add("pensamento-autoria");
@@ -87,6 +100,7 @@ const ui = {
         li.appendChild(iconeAspas);
         li.appendChild(dadoConteudo);
         li.appendChild(dadoAutoria);
+        li.appendChild(cardData);
         li.appendChild(icones);
 
         listaPensamentos.appendChild(li);
@@ -104,6 +118,7 @@ const ui = {
         document.getElementById("pensamento-id").value = dado.id;
         document.getElementById("pensamento-conteudo").value = dado.conteudo;
         document.getElementById("pensamento-autoria").value = dado.autoria;
+        document.getElementById("pensamento-data").value = dado.data;
     }
 };
 

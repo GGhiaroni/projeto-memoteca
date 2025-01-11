@@ -12,7 +12,14 @@ const api = {
             // const response = await fetch(`${URL_BASE}/pensamentos`);
             // return await response.json();
             const response = await axios.get(`${URL_BASE}/pensamentos`);
-            return await response.data;
+            const dados = await response.data;
+
+            return dados.map(dado => { 
+                return {
+                    ...dado,
+                    data: new Date(dado.data)
+                }
+            });
         } catch (error) {
             alert('Erro ao buscar os dados!');
             throw error;
@@ -48,7 +55,12 @@ const api = {
             // const response = await fetch(`${URL_BASE}/pensamentos/${id}`);
             // return await response.json();
             const response = await axios.get(`${URL_BASE}/pensamentos/${id}`);
-            return await response.data;
+            const dado = await response.data;
+
+            return {
+                ...dado,
+                data: new Date(dado.data)
+            }
         } catch (error) {
             alert("Erro ao buscar dado!");
             throw error;
