@@ -118,7 +118,7 @@ const ui = {
         document.getElementById("pensamento-id").value = dado.id;
         document.getElementById("pensamento-conteudo").value = dado.conteudo;
         document.getElementById("pensamento-autoria").value = dado.autoria;
-        document.getElementById("pensamento-data").value = dado.data;
+        document.getElementById("pensamento-data").value = dado.data.toISOString().split("T")[0];
         document.getElementById("form-container").scrollIntoView();
     }
 };

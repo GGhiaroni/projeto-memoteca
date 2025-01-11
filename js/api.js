@@ -40,7 +40,7 @@ const api = {
             const dataConvertida = converterStringParaData(dado.data);
             const response = await axios.post(`${URL_BASE}/pensamentos`, {
                 ...dado,
-                data: dataConvertida
+                data: dataConvertida.toISOString()
             });
             return await response.data;
         } catch (error) {
